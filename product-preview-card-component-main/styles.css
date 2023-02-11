@@ -1,0 +1,164 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --color-primary: hsl(158, 36%, 37%);
+  --color-secondary: hsl(30, 38%, 92%);
+}
+
+body {
+  font-family: Montserrat;
+  color: gray;
+  font-size: 1.4rem;
+  background: var(--color-secondary);
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Fraunces;
+  color: initial;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+
+@media screen and (min-width: 1140px) {
+  h1,
+  h2,
+  h3 {
+    margin-top: 0.5rem;
+    font-size: 4rem;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-1x2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 1140px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Buttons */
+
+.btn {
+  padding: 0.5rem 6rem;
+  border-radius: 0.8rem;
+  outline: 0;
+  border: none;
+  font-family: Montserrat;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: hsl(158, 80%, 21%);
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn__text {
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
+.btn__icon {
+  transform: translateY(3px);
+}
+
+/* Price */
+.price__new {
+  font-size: 3rem;
+  font-family: Fraunces;
+  color: var(--color-primary);
+  margin-right: 2rem;
+}
+
+.price__old {
+  text-decoration: line-through;
+  display: inline-block;
+  transform: translateY(-4px);
+}
+
+.container {
+  max-width: 35rem;
+  border: 1px;
+  border-radius: 1rem;
+  background: white;
+}
+
+@media screen and (min-width: 1140px) {
+  .container {
+    /* max-width: 60vw; */
+    max-width: 80rem;
+  }
+}
+
+.container__inner {
+  padding: 2rem;
+}
+
+@media screen and (min-width: 1140px) {
+  .container__inner {
+    padding: 4rem;
+  }
+}
+
+img {
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+@media screen and (min-width: 1140px) {
+  img {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 0;
+  }
+}
+
+.card__text {
+  line-height: 2rem;
+}
+
+@media screen and (min-width: 1140px) {
+  .card__text {
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    margin-top: 4.5rem;
+  }
+}
+
+.brand {
+  letter-spacing: 0.3rem;
+}
